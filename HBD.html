@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Punika</title>
+    <style>
+        body {
+            background-color: #f0f4f8; /* Clean, neutral light blue */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            color: #4a7c8c; /* Friendly teal */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .bday-text {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .apology-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-style: italic;
+        }
+
+        .confetti {
+            position: absolute;
+            font-size: 20px;
+            animation: fall 3s linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Happy Birthday, Punika! 🎂</h1>
+        <div class="bday-text">Wishing you a great day.</div>
+        
+        <p>I hope your year ahead is full of good things and that you're doing really well.</p>
+
+        <div class="apology-section">
+            <p>I also wanted to take a second to say I'm sorry for how I handled things in the past. I've done some growing since then and just wanted to be honest about that. No pressure at all, just wanted to reach out.</p>
+        </div>
+
+        <p style="font-weight: bold; color: #4a7c8c; margin-top: 20px;">— [Your Name]</p>
+    </div>
+
+    <script>
+        for (let i = 0; i < 15; i++) {
+            let confetti = document.createElement('div');
+            confetti.innerText = '✨';
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            confetti.style.opacity = Math.random();
+            document.body.appendChild(confetti);
+        }
+    </script>
+
+</body>
+</html>
